@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var ObjectId = mongoose.Schema.ObjectId
 
 var moonSchema = new mongoose.Schema({
     name: {type: String, required: true},
