@@ -10,10 +10,11 @@ let schema = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, dropDups: true },
     password: { type: String, required: true },
+    // this keeps track of when the user was created
     created: { type: Number, required: true, default: Date.now() }
 })
 
-//Never have to worry about changing. just copy and paste this stuff
+//Never have to worry about changing. just copy and paste this stuff. These two methods make sure you don't screw up user data
 schema.pre('save', function (next) {
     //tells the schema: if the user hasn't modified their password, go next. If they have, make sure user is still a valid user
     var user = this;
