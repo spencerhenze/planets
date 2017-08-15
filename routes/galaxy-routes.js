@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var galaxies = require('../models/galaxy') //import your galaxy model
-var stars = ('../models/stars')
+var stars = ('../models/star')
 
 
 router
