@@ -3,6 +3,8 @@ var router = express.Router()
 var galaxies = require('../models/galaxy') //import your galaxy model
 var stars = ('../models/star')
 
+// sessions use JavaScript Web Tokens (JWT) to identify requests. Uses HEADERS
+// JWT is a 32 bit string  
 
 router
     // DEFAULT ROUTES
