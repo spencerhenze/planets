@@ -5,7 +5,7 @@ var starSchema = new mongoose.Schema({
     name: {type: String, required: true},
 
     //Relationships:
-    galaxyId: {type: ObjectId, ref: 'Galaxy', required: true}   //when you use this data type, mongo will know if the id matches the id of a Galaxy 
+    galaxyId: {type: ObjectId, ref: 'Galaxy', required: true, ref: 'Galaxy'}   //when you use this data type, mongo will know if the id matches the id of a Galaxy 
 })
 
 var Star = mongoose.model('Star', starSchema); 
